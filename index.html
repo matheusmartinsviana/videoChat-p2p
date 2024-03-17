@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicação P2P</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <input type="text" id="localPeerId" readonly> <br><br><br>
+    <input type="text" id="localPeerId" readonly> <br><br>
     <input type="text" id="remotePeerId">
     <button id="btn-call">Call</button> <br><br>
-    <video id="localVideo" autoplay></video>
-    <video id="remoteVideo" autoplay></video>
+    <div class="video-container">
+        <video id="localVideo" autoplay></video>
+        <video id="remoteVideo" autoplay></video>
+    </div>
     <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
