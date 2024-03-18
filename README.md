@@ -18,3 +18,5 @@ This repository contains the source code for a simple peer-to-peer (P2P) video c
    - You should now have a direct P2P video call connection between the two tabs/devices.
   
 Contributions are welcome! Please feel free to submit a pull request with any enhancements, bug fixes, or suggestions.
+# doc: 
+https://peerjs.com/
