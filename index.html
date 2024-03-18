@@ -2,6 +2,8 @@
 <html lang="pt">
 
 <head>
+    <!-- font awesome -->
+    <link rel="stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicação P2P</title>
@@ -10,7 +12,7 @@
 
 <body>
     <p>your id:</p>
-    <input type="text" id="localPeerId" readonly> <br><br>
+    <input type="text" id="localPeerId" readonly> <button onclick="copyText()">copy</button> <br><br>
     <p>Paste/Write here another id to connect:</p>
     <input type="text" id="remotePeerId">
     <button id="btn-call">Call</button> <br><br>

@@ -19,12 +19,18 @@ peer.on("open", id => { // event when the connection with peer is open, and rece
 
 btnCall.addEventListener("click", function () { // add a listener to call button
     const remotePeerId = inputRemotePeerId.value; //get id from remotePeer from input
-    const call = peer.call(remotePeerId, localStream);
-    call.on("stream", stream => {
-        const remoteVideo = document.getElementById("remoteVideo");
-        remoteVideo.srcObject = stream;
-        remoteVideo.onloadedmetadata = () => remoteVideo.play(); // show the remoteVideo when metadata loaded
-    });
+    try {
+        const call = peer.call(remotePeerId, localStream);
+        call.on("stream", stream => {
+            const remoteVideo = document.getElementById("remoteVideo");
+            remoteVideo.srcObject = stream;
+            remoteVideo.onloadedmetadata = () => remoteVideo.play(); // show the remoteVideo when metadata loaded
+        });
+    } catch (err) {
+        console.log("error when starting the call: ", err);
+        alert("Please verify that the remote peer ID is correct and try again.")
+    }
+
 });
 
 peer.on("call", call => { // listener to when reiceive the call
@@ -35,3 +41,10 @@ peer.on("call", call => { // listener to when reiceive the call
         remoteVideo.onloadedmetadata = () => remoteVideo.play();
     });
 });
+
+// function to copy localCode
+function copyText() {
+    inputLocalPeerId.select();
+    document.execCommand("copy");
+    alert("Copied text: " + inputLocalPeerId.value + " now you can share with your friends!");
+}
