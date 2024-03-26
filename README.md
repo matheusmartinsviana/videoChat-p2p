@@ -1,4 +1,4 @@
-# Simple P2P Video Call Application
+# Simple P2P Video Call Application 💻
 
 This repository contains the source code for a simple peer-to-peer (P2P) video call application using WebRTC and PeerJS. The application enables users to make video calls directly with each other without the need for an intermediate server to relay video streams, thus ensuring low latency and high privacy.
 
